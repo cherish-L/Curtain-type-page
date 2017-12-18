@@ -1,0 +1,1 @@
+# Curtain-type-page
