@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta content="email=no" name="format-detection" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+		<title>页面交互设计</title>
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
+		<script type="text/javascript" src="plugins/zepto.min.js"></script>
+		<script type="text/javascript" src="plugins/iscroll-probe.js"></script>
+		<script type="text/javascript" src="plugins/isMobile.min.js"></script>
+		<script>
+			(function() {
+				var html = document.documentElement;
+				//适配
+				if(!isMobile.any) {
+					html.style.width = '550px';
+					html.style.margin = '0 auto';
+					//						window.location.href="www.baidu.com";
+				}
+
+				window.onresize = function() {
+					var hWidth = html.getBoundingClientRect().width;
+					html.style.fontSize = hWidth / 25 + "px";
+				};
+
+				window.onresize();
+			})();
+		</script>
+	</head>
+
+	<body>
+		<div class="Article_info">
+			<div class="header">
+				<div class="header_w">
+					<img class="top" src="images/top.png"/>
+					<img class="icon3" src="images/icon3.png"/>
+				</div>
+			</div>
+			<div class="Article_info_wrap">
+				<div class="section">
+					<div class="section_null"></div>
+					<img src="images/contenr.png"/>
+					<div style="height: 1px; width: 100%; background: #ffffff;position: relative;">
+						<div style="position: absolute;top: -10px;left: 0;height: 1000px;background: #ffffff;width: 100%;">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer"><img src="images/footer.png"/></div>
+			<div class="Album-list">
+				<div class="Album-list-section">
+					<img src="images/page.png"/>
+					<div style="height: 1px; width: 100%; background: #ffffff;"></div>
+				</div>
+			</div>
+			<div class="openBtn"></div>
+		</div>
+		<a class="return" href="javascript:;"></a>
+		<a class="share" href="javascript:;"></a>
+	</body>
+	<script type="text/javascript" src="js/demo.js"></script>
+</html>
